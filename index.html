@@ -193,6 +193,10 @@ function toggleMusic(){
     const music = document.getElementById("music");
     const icon = document.querySelector("#muteBtn i");
 
+    if(music.paused){
+        music.play();
+    }
+
     if(music.muted){
         music.muted = false;
         icon.className = "fa-solid fa-volume-high";
