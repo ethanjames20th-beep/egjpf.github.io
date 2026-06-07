@@ -144,7 +144,7 @@ body{
 <div class="card">
 
     <button id="muteBtn" onclick="toggleMusic()">
-        <i class="fa-solid fa-volume-high"></i>
+        <i class="fa-solid fa-volume-xmark"></i>
     </button>
 
     <!-- PROFILE PICTURE -->
@@ -184,12 +184,23 @@ body{
 </div>
 <!-- MUSIC -->
 
-<audio id="music" autoplay loop>
+<audio id="music" loop>
     <source src="Yeat - Out The Way (INSTRUMENTAL).mp3" type="audio/mpeg">
 </audio>
 
 <script>
+
+window.onload = function(){
+
+    const music = document.getElementById("music");
+
+    music.volume = 0.4; // 40%
+
+    music.muted = true; // starts muted
+}
+
 function toggleMusic(){
+
     const music = document.getElementById("music");
     const icon = document.querySelector("#muteBtn i");
 
@@ -198,13 +209,18 @@ function toggleMusic(){
     }
 
     if(music.muted){
+
         music.muted = false;
         icon.className = "fa-solid fa-volume-high";
+
     }else{
+
         music.muted = true;
         icon.className = "fa-solid fa-volume-xmark";
+
     }
 }
+
 </script>
 
 </body>
