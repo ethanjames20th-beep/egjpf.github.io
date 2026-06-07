@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Bio</title>
+
+<style>
+:root{
+    --bg: #000000;
+    --card: #151a35;
+    --button: #222a55;
+    --accent: #5865F2;
+    --text: white;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background: var(--bg);
+    color: var(--text);
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.card{
+    width:380px;
+    padding:30px;
+    text-align:center;
+
+    background: var(--card);
+    border-radius:25px;
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+.avatar{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    border:4px solid var(--accent);
+    object-fit:cover;
+}
+
+.username{
+    margin-top:15px;
+    font-size:2rem;
+    font-weight:bold;
+}
+
+.tag{
+    margin-top:8px;
+    color:#b5bddf;
+}
+
+.links{
+    margin-top:25px;
+}
+
+.links a{
+    display:block;
+
+    text-decoration:none;
+    color:white;
+
+    background:var(--button);
+
+    margin-top:12px;
+    padding:15px;
+
+    border-radius:14px;
+
+    transition:0.2s;
+}
+
+.links a:hover{
+    transform:translateY(-2px);
+    background:#2b3570;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+
+    <!-- PROFILE PICTURE -->
+    <img
+    class="avatar"
+    src="https://imgur.com/a/eMhg0nD">
+
+    <!-- USERNAME -->
+    <div class="username">EGJ.PF</div>
+
+    <!-- CUSTOM TAG -->
+    <div class="tag">
+       Tyla ✝🌺
+    </div>
+
+    <!-- LINKS -->
+    <div class="links">
+
+        <a href="https://www.tiktok.com/@egj.iom" target="_blank">
+            TikTok
+        </a>
+
+        <a href="https://www.instagram.com/egj.iom/" target="_blank">
+            Instagram
+        </a>
+
+        <a href="https://steamcommunity.com/profiles/76561199367718817/" target="_blank">
+            Steam
+        </a>
+
+        <a href="https://discordapp.com/users/1095396842285584448"_blank">
+            Discord
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
