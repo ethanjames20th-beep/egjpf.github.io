@@ -53,6 +53,8 @@ body{
 }
 
 .card{
+    position:relative;
+    
     width:380px;
     padding:30px;
     text-align:center;
@@ -112,11 +114,38 @@ body{
     transform:translateY(-2px);
     background:#2b3570;
 }
+
+#muteBtn{
+    position:absolute;
+    top:15px;
+    right:15px;
+
+    width:36px;
+    height:36px;
+
+    border:1px solid rgba(255,255,255,0.1);
+    background:#2f2f2f;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:0.2s;
+}
+
+#muteBtn:hover{
+    background:#444444;
+}
+
 </style>
 </head>
 <body>
 
 <div class="card">
+
+    <button id="muteBtn" onclick="toggleMusic()">
+        <i class="fa-solid fa-volume-high"></i>
+    </button>
 
     <!-- PROFILE PICTURE -->
     <img
@@ -153,11 +182,26 @@ body{
     </div>
 
 </div>
-
 <!-- MUSIC -->
-<audio autoplay loop>
+
+<audio id="music" autoplay loop>
     <source src="otw.mp3" type="audio/mpeg">
 </audio>
+
+<script>
+function toggleMusic(){
+    const music = document.getElementById("music");
+    const icon = document.querySelector("#muteBtn i");
+
+    if(music.muted){
+        music.muted = false;
+        icon.className = "fa-solid fa-volume-high";
+    }else{
+        music.muted = true;
+        icon.className = "fa-solid fa-volume-xmark";
+    }
+}
+</script>
 
 </body>
 </html>
