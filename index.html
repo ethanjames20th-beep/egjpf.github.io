@@ -142,9 +142,55 @@ body{
     background:#444444;
 }
 
-</style>
+/* SIDE PHOTOS */
+
+.side-photo{
+    position:absolute;
+
+    width:160px;
+    height:220px;
+
+    background:rgba(27,27,27,0.85);
+
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:4px;
+
+    overflow:hidden;
+
+    animation:fadeIn 2s ease;
+
+    box-shadow:0 0 15px rgba(0,0,0,0.4);
+}
+
+.side-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.left-photo{
+    top:50px;
+    left:50px;
+}
+
+.right-photo{
+    top:50px;
+    right:50px;
+}
+    
+</style>    
 </head>
 <body>
+
+<!-- LEFT PHOTO -->
+<div class="side-photo left-photo">
+    <img src="https://www.image2url.com/r2/default/images/1780919008878-488b8298-3eca-4bd7-9ecd-95a8700dcc42.jpg" alt="Left Photo">
+</div>
+
+<!-- RIGHT PHOTO -->
+<div class="side-photo right-photo">
+    <img src="https://www.image2url.com/r2/default/images/1780919266264-da10d110-51a6-425e-9422-ddc228cfcfbc.jpg" alt="Right Photo">
+</div>
 
 <div class="card">
 
